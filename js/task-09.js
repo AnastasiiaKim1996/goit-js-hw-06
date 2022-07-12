@@ -8,15 +8,11 @@ const spanColor = document.querySelector(".color");
 
 const button = document.querySelector(".change-color");
 
-// const body = document.querySelector("body");
-// const button = document.querySelector(".change-color");
-// let color = document.querySelector(".color");
-// button.addEventListener("click", changeColor);
+button.onclick = function () {
+  body.style.backgroundColor = getRandomHexColor();
+};
 // function changeColor() {
 // const newColor = getRandomHexColor();
 // body.style.backgroundColor = newColor;
 // color.textContent = `${newColor}`;
 // // }
-// let newColor = (spanColor.textContent = getRandomHexColor());
-// if ((body.style.backgroundColor = newColor)) {
-// }
