@@ -11,8 +11,9 @@ const list = document.querySelector("#ingredients");
 
 //-- create elem --//
 
-const createItem = document.createElement("li").classList.toggle("item");
+const createItem = document.createElement("li");
 
+createItem.classList.add("item");
 // -- reduce --//
 
 const addItem = ingredients.reduce(
