@@ -7,18 +7,29 @@ const ingredients = [
   "Condiments",
 ];
 
-const list = document.querySelector("#ingredients");
+// //-- create elem --//
 
-//-- create elem --//
+// const createItem = document.createElement("li").classList.add("item");
 
-const createItem = document.createElement("li").classList.add("item");
+// // -- reduce --//
 
-// -- reduce --//
+// const addItem = ingredients.reduce(
+//   (acc, element) => acc + `<li>${element}</li>`,
+//   ""
+// );
+// //-- paste to DOM --//
 
-const addItem = ingredients.reduce(
-  (acc, element) => acc + `<li>${element}</li>`,
-  ""
-);
-//-- paste to DOM --//
+// list.innerHTML = addItem;
 
-list.innerHTML = addItem;
+//-- * виправлена робота *--//
+
+const ulList = document.querySelector("#ingredients");
+
+const items = ingredients.map((el) => {
+  const li = document.createElement("li");
+  li.classList.add("item");
+  li.textContent = el;
+  return li;
+});
+
+ulList.append(...items);
